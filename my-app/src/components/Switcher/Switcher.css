@@ -1,0 +1,12 @@
+.switcherOn {
+    background-color: green;
+}
+.switcherOff {
+    background-color: red;
+}
+.bulb {
+    padding: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 10px;
+}
