@@ -3,28 +3,30 @@ import React, { useState } from 'react';
 type AccordionUncontrolledType = {
     title: string
 }
-type AccardionTitleType = {
-    name: string
-}
 
 export function AccordionUncontrolled(props: AccordionUncontrolledType) {
     let [collapsed, setCollapsed] = useState(true);
 
     return (
         <div>
-            <AccordionTitle name = { props.title }/>
-            <button 
-                onClick={() => {
-                    setCollapsed(!collapsed)
-                }}
-            >Toggle</button>
+            <AccordionTitle name={props.title} setCollapsed={setCollapsed} collapsed={collapsed}/>
             { !collapsed && <AccordionBody /> }
         </div>
     )
 }
 
+type AccardionTitleType = {
+    name: string
+    collapsed: boolean
+    setCollapsed: (value: boolean) => void
+}
+
 function AccordionTitle(props: AccardionTitleType) {
-    return <h3>{ props.name }</h3>
+    return <h3
+        onClick={() => {
+            props.setCollapsed(!props.collapsed)
+        }
+    }>{ props.name }</h3>
 }
 
 function AccordionBody() {
