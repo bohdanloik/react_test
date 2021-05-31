@@ -1,7 +1,7 @@
-.switcherOn {
+.on {
     background-color: green;
 }
-.switcherOff {
+.off {
     background-color: red;
 }
 .bulb {

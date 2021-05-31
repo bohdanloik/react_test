@@ -1,20 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Accordion } from './components/Accordion/Accordion';
 import { Rating } from './components/Rating/Rating';
 import { Switcher } from './components/Switcher/Switcher';
+import { AccordionUncontrolled } from './components/AccordionUncontrolled/AccordionUncontrolled';
+import { RatingUncontrolled } from './components/RatingUncontrolled/RatingRatingUncontrolled';
 
 function App() {
   return (
     <div>
-      <Rating selectedNumber = {3}/>
       <Accordion title = {'Hello'} collapsed={true}/>
-      <Accordion title = {'New Component'} collapsed={true}/>
-      <Accordion title = {'New Component'} collapsed={false}/>
-      <Rating selectedNumber = {2}/>
-      <Switcher on={false}/>
-
+      <AccordionUncontrolled title = {'New Component'} />
+      <Rating selectedNumber = {3}/>
+      <RatingUncontrolled/>
+      <Switcher/>
     </div>
   );
 }

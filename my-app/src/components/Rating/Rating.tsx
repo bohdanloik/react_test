@@ -21,11 +21,10 @@ type StarPropsType = {
 }
 
 function Star(props: StarPropsType) {
-    if(props.checked){
+    if (props.checked){
         return <span><b>Star</b></span>
     }
     else {
         return <span>Star</span>
     }
 }
-
